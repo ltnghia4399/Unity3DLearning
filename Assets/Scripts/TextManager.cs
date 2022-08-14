@@ -10,7 +10,7 @@ namespace TypingGame
         [SerializeField] TextMeshProUGUI targetText;
         [SerializeField] TextMeshProUGUI userInputText;
         [SerializeField] TextMeshProUGUI numOfC;
-        [SerializeField] TextMeshProUGUI numOfW;
+        [SerializeField] TextMeshProUGUI numOfW; //Why
 
         [SerializeField] int timeToWin = 10;
         [SerializeField] int timeToLose = 3;
