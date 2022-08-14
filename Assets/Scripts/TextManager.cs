@@ -9,6 +9,8 @@ namespace TypingGame
     {
         [SerializeField] TextMeshProUGUI targetText;
         [SerializeField] TextMeshProUGUI userInputText;
+        [SerializeField] TextMeshProUGUI numOfC;
+        [SerializeField] TextMeshProUGUI numOfW;
 
         [SerializeField] int timeToWin = 10;
         [SerializeField] int timeToLose = 3;
@@ -45,6 +47,10 @@ namespace TypingGame
             CheckLogicWhenLosing(timeToLose);
 
             GetUserInput();
+
+            GetScoreOfCorrect(numOfCorrect);
+
+            GetScoreOfWrong(numOfWrong);
 
         }
 
@@ -122,6 +128,16 @@ namespace TypingGame
         private char GetRandomCharAToZ()
         {
             return(char)Random.Range('a', 'z');
+        }
+
+        private void GetScoreOfCorrect(int numOfCorrect)
+        {
+            numOfC.SetText($"Number of correct: {numOfCorrect}");
+        }
+
+        private void GetScoreOfWrong(int numOfWrong)
+        {
+            numOfW.SetText($"Number of wrong: {numOfWrong}");
         }
     }
 
